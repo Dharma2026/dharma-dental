@@ -262,4 +262,4 @@ function PostCard({ post }: { post: Post }) {
 }
 
 // Enable ISR - revalidate every hour
-export const revalidate = 3600;
+export const revalidate = 60;

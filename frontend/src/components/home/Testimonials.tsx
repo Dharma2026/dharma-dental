@@ -44,7 +44,7 @@ const TEXT_REVIEWS: TextReview[] = [
     location: "Hyderabad",
     rating: 5,
     text: "I had a very pleasant experience at Dharma Dental (KPHB). I went for a general checkup. They are highly trained and very professional staff and doctors. The way they speak, the way they dressed is very professional. I felt safe and comfortable. I would rate it as the cleanest and best maintained dental hospital in Hyderabad.",
-    image: "/placeholder-blog.jpg"
+    image: "/home/reviews/reviews.webp"
   },
   {
     id: 2,
@@ -52,7 +52,7 @@ const TEXT_REVIEWS: TextReview[] = [
     location: "Bengaluru",
     rating: 4.9,
     text: "Excellent treatment for root canal. The doctors explained the procedure clearly and it was virtually painless. The clinic environment is very calming and high-tech. Highly recommended for anyone looking for quality dental care.",
-    image: "/placeholder-blog.jpg"
+    image: "/home/reviews/reviews.webp"
   }
 ];
 
@@ -60,31 +60,31 @@ const VIDEO_REVIEWS: VideoReview[] = [
   {
     id: 1,
     title: "Root Canal Treatment & Crown",
-    thumbnail: "/placeholder-blog.jpg",
+    thumbnail: "/home/reviews/reviews.webp",
     duration: "2:15"
   },
   {
     id: 2,
     title: "Patient Review | Happy Smile",
-    thumbnail: "/",
+    thumbnail: "/home/reviews/reviews.webp",
     duration: "1:45"
   },
   {
     id: 3,
     title: "Patient Testimonial | Dharma Dental",
-    thumbnail: "/",
+    thumbnail: "/home/reviews/reviews.webp",
     duration: "3:10"
   },
   {
     id: 4,
     title: "Invisible Braces Success",
-    thumbnail: "/",
+    thumbnail: "/home/reviews/reviews.webp",
     duration: "2:50"
   },
   {
     id: 5,
     title: "Full Mouth Rehab Journey",
-    thumbnail: "/",
+    thumbnail: "/home/reviews/reviews.webp",
     duration: "4:20"
   }
 ];
