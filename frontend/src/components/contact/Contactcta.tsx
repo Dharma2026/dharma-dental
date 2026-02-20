@@ -55,7 +55,7 @@ export default function ContactCTA() {
             whileTap={{ scale: 0.97 }}
             className="inline-flex items-center gap-3 bg-yellow-400 text-black px-10 py-5 rounded-full font-black text-sm uppercase tracking-widest shadow-2xl shadow-yellow-400/20 hover:bg-yellow-300 transition-colors"
           >
-            <Phone size={18} /> +91 91692 69369
+            <Phone size={18} /> +91 98765 43210
           </motion.a>
         </motion.div>
       </div>
