@@ -3,6 +3,8 @@ import { Open_Sans, Montserrat } from "next/font/google";
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import AppointmentPopup from '@/components/contact/Appointmentpopup';
+import ScrollToTop  from '@/components/ScrollToTop';
+
 import "./globals.css";
 
 const openSans = Open_Sans({
@@ -38,6 +40,7 @@ export default function RootLayout({
         {children}
         <AppointmentPopup />
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );
