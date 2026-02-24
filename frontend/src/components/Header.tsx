@@ -123,9 +123,9 @@ export default function Header() {
                 <Facebook size={16} />
               </a>
               <div className="h-4 w-px bg-slate-800 mx-2" />
-              <a href="mailto:hydndc@gmail.com"
+              <a href="mailto:dharma@gmail.com"
                 className="text-[14px] text-white font-semibold hover:text-yellow-400 transition-colors">
-                hydndc@gmail.com
+                dharma@gmail.com
               </a>
             </div>
           </div>
