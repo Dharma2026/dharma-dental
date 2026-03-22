@@ -19,11 +19,11 @@ const stagger: Variants = {
 
 const CLINICS = [
   {
-    city: 'Hyderabad',
-    branch: 'Kondapur',
-    address: 'Block 1, DivyaSree Omega, Survey No 13, Kothaguda, Telangana 500084',
+    city: 'Anantapur',
+    branch: 'Anantapur',
+    address: '1st Floor, Lakshmi Bazar, 9-2-291, Anantapur Rd, beside Union Bank, J.R.S Colony, Rayadurgam, Andhra Pradesh 515865',
     phone: '+91 903 006 2369',
-    email: 'kondapurndc@gmail.com',
+    email: 'info@dharmadentalcare.com',
     mapLink: 'https://maps.app.goo.gl/B7Hp29dSk2G9iMMD7',
     hours: 'Mon–Sat: 9AM – 8PM',
     gradient: 'from-yellow-400/20 via-yellow-300/10 to-transparent',

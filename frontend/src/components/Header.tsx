@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import Image from "next/image"
 import { 
   Menu, 
   X, 
@@ -18,9 +19,9 @@ import {
 } from 'lucide-react';
 
 const TREATMENTS = [
-  { name: "General Dentistry", href: "/services/general-dentistry" },
-  { name: "Pediatric Dentistry", href: "/services/pediatric-dentistry" },
-  { name: "Root Canal Treatment", href: "/services/root-canal" },
+  { name: "General Dentistry", href: "/treatments/general-dentistry" },
+  { name: "Pediatric Dentistry", href: "/treatments/pediatric-dentistry" },
+  { name: "Root Canal Treatment", href: "/treatments/root-canal" },
   { name: "Dental Implants", href: "/services/dental-implants" },
   { name: "Orthodontics & Braces", href: "/services/orthodontics" },
   { name: "Clear Aligners", href: "/services/clear-aligners" },
@@ -123,9 +124,9 @@ export default function Header() {
                 <Facebook size={16} />
               </a>
               <div className="h-4 w-px bg-slate-800 mx-2" />
-              <a href="mailto:dharma@gmail.com"
+              <a href="mailto:info@dharmadentalcare.com"
                 className="text-[14px] text-white font-semibold hover:text-yellow-400 transition-colors">
-                dharma@gmail.com
+                info@dharmadentalcare.com
               </a>
             </div>
           </div>
@@ -140,15 +141,15 @@ export default function Header() {
           <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
 
             {/* LOGO */}
-            <Link href="/" className="flex items-center gap-2.5 group cursor-pointer shrink-0">
-              <div className="w-9 h-9 xl:w-10 xl:h-10 bg-yellow-400 rounded-xl flex items-center justify-center shadow-lg shadow-yellow-400/20 group-hover:rotate-12 transition-transform">
-                <Stethoscope size={20} className="text-black xl:hidden" />
-                <Stethoscope size={24} className="text-black hidden xl:block" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg xl:text-xl font-black tracking-tighter text-white block leading-none">Dharma Dental</span>
-                <span className="text-[7px] xl:text-[8px] uppercase tracking-[0.3em] text-yellow-500 font-bold">Excellence in Care</span>
-              </div>
+            <Link href="/" className="flex items-center shrink-0 cursor-pointer">
+              <Image
+                src="/logo.webp"
+                alt="Dharma Dental Care"
+                width={160}
+                height={50}
+                className="xl:w-[180px] xl:h-auto object-contain"
+                priority
+              />
             </Link>
 
             {/* DESKTOP NAV */}

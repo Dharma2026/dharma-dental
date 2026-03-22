@@ -202,39 +202,39 @@ export default function AppointmentPopup() {
           />
 
           {/* Centered popup */}
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
+          <div className="fixed inset-0 z-50 flex items-center justify-center pt-24 lg:pt-20 p-4 pointer-events-none">
             <motion.div
               key="popup"
               initial={{ opacity: 0, y: 40, scale: 0.92 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 40, scale: 0.92 }}
               transition={{ type: 'spring', stiffness: 320, damping: 28 }}
-              className="pointer-events-auto w-full max-w-md max-h-[90vh] flex flex-col"
+              className="pointer-events-auto w-full max-w-md lg:max-w-[420px] max-h-[92vh] lg:max-h-[85vh] flex flex-col"
             >
               {/* Glow ring */}
               <div className="absolute -inset-[1px] rounded-[2rem] bg-gradient-to-br from-yellow-400/40 via-blue-500/20 to-transparent blur-sm pointer-events-none" />
 
-              <div className="relative rounded-[2rem] overflow-hidden bg-slate-950 border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.7)] flex flex-col max-h-[90vh]">
+              <div className="relative rounded-[2rem] overflow-hidden bg-slate-950 border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.7)] flex flex-col max-h-[92vh] lg:max-h-[85vh]">
 
                 {/* Ambient blobs */}
                 <div className="absolute top-0 right-0 w-48 h-48 bg-yellow-400/10 rounded-full blur-3xl pointer-events-none" />
                 <div className="absolute bottom-0 left-0 w-36 h-36 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
                 {/* ── Header (fixed) ── */}
-                <div className="relative flex items-center justify-between px-6 py-4 border-b border-white/5 shrink-0">
+                <div className="relative flex items-center justify-between px-6 py-4 lg:py-2.5 border-b border-white/5 shrink-0">
                   <div className="flex items-center gap-3">
                     <motion.div
                       animate={{ rotate: [0, 10, -10, 0] }}
                       transition={{ repeat: Infinity, duration: 3, delay: 1 }}
-                      className="w-9 h-9 rounded-xl bg-yellow-400 flex items-center justify-center text-black shadow-lg shadow-yellow-400/30"
+                      className="w-8 h-8 lg:w-7 lg:h-7 rounded-xl bg-yellow-400 flex items-center justify-center text-black shadow-lg shadow-yellow-400/30"
                     >
-                      <CalendarDays size={18} />
+                      <CalendarDays size={16} />
                     </motion.div>
                     <div>
-                      <p className="text-white font-black text-sm tracking-tight">Book Appointment</p>
+                      <p className="text-white font-black text-sm lg:text-xs tracking-tight">Book Appointment</p>
                       <div className="flex items-center gap-1.5 mt-0.5">
                         <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                        <span className="text-green-400 text-[10px] font-bold">Available Today</span>
+                        <span className="text-green-400 text-[10px] lg:text-[9px] font-bold">Available Today</span>
                       </div>
                     </div>
                   </div>
@@ -247,7 +247,7 @@ export default function AppointmentPopup() {
                 </div>
 
                 {/* ── Scrollable Body ── */}
-                <div className="relative overflow-y-auto flex-1 px-6 pb-6 pt-5">
+                <div className="relative overflow-y-auto flex-1 px-6 lg:px-5 pb-5 lg:pb-4 pt-4 lg:pt-3">
                   {submitted ? (
                     <motion.div
                       initial={{ opacity: 0, scale: 0.9 }}
@@ -277,9 +277,9 @@ export default function AppointmentPopup() {
                       </button>
                     </motion.div>
                   ) : (
-                    <form onSubmit={handleSubmit} className="space-y-3">
+                    <form onSubmit={handleSubmit} className="space-y-2.5 lg:space-y-2">
 
-                      <div className="flex items-center gap-1.5 mb-4">
+                      <div className="flex items-center gap-1.5 mb-3 lg:mb-2">
                         <Sparkles size={11} className="text-yellow-400" />
                         <span className="text-[10px] font-black uppercase tracking-[0.2em] text-yellow-400">
                           Dharma Dental — Free Consultation
@@ -287,28 +287,67 @@ export default function AppointmentPopup() {
                       </div>
 
                       {/* Name + Phone */}
-                      <div className="grid grid-cols-2 gap-3">
-                        <FloatingInput label="Your Name" required value={form.name} onChange={(e) => handleChange('name', e.target.value)} />
-                        <FloatingInput label="Phone" type="tel" required value={form.phone} onChange={(e) => handleChange('phone', e.target.value)} />
+                      <div className="grid grid-cols-2 gap-3 lg:gap-2">
+                        <FloatingInput
+                          label="Your Name"
+                          required
+                          value={form.name}
+                          onChange={(e) => handleChange('name', e.target.value)}
+                        />
+                        <FloatingInput
+                          label="Phone"
+                          type="tel"
+                          required
+                          value={form.phone}
+                          onChange={(e) => handleChange('phone', e.target.value)}
+                        />
                       </div>
 
                       {/* Email */}
-                      <FloatingInput label="Email" type="email" value={form.email} onChange={(e) => handleChange('email', e.target.value)} />
-
-                      {/* Treatment + Location */}
-                      <StyledSelect label="Treatment" required options={TREATMENTS} value={form.treatment} onChange={(e) => handleChange('treatment', e.target.value)} />
-                      <StyledSelect label="Clinic Location" required options={LOCATIONS} value={form.location} onChange={(e) => handleChange('location', e.target.value)} />
-
-                      {/* Message */}
-                      <FloatingTextarea
-                        label="Message (Optional)"
-                        value={form.message}
-                        onChange={(e) => handleChange('message', e.target.value)}
+                      <FloatingInput
+                        label="Email"
+                        type="email"
+                        value={form.email}
+                        onChange={(e) => handleChange('email', e.target.value)}
                       />
 
+                      {/* Treatment */}
+                      <StyledSelect
+                        label="Treatment"
+                        required
+                        options={TREATMENTS}
+                        value={form.treatment}
+                        onChange={(e) => handleChange('treatment', e.target.value)}
+                      />
+
+                      {/* Location */}
+                      <StyledSelect
+                        label="Clinic Location"
+                        required
+                        options={LOCATIONS}
+                        value={form.location}
+                        onChange={(e) => handleChange('location', e.target.value)}
+                      />
+
+                      {/* Message — textarea on tall screens, single-line on short laptop screens */}
+                      <div className="hidden [@media(min-height:750px)]:block">
+                        <FloatingTextarea
+                          label="Message (Optional)"
+                          value={form.message}
+                          onChange={(e) => handleChange('message', e.target.value)}
+                        />
+                      </div>
+                      <div className="block [@media(min-height:750px)]:hidden">
+                        <FloatingInput
+                          label="Message (Optional)"
+                          value={form.message}
+                          onChange={(e) => handleChange('message', e.target.value)}
+                        />
+                      </div>
+
                       {/* reCAPTCHA */}
-                      <div className="pt-1">
-                        <div className="scale-[0.85] origin-left -ml-1">
+                      <div className="pt-0.5">
+                        <div className="scale-[0.85] lg:scale-[0.75] origin-left -ml-1">
                           <ReCAPTCHA
                             ref={recaptchaRef}
                             sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
@@ -326,10 +365,11 @@ export default function AppointmentPopup() {
 
                       {/* Submit */}
                       <motion.button
-                        type="submit" disabled={submitting}
+                        type="submit"
+                        disabled={submitting}
                         whileHover={{ scale: submitting ? 1 : 1.02 }}
                         whileTap={{ scale: submitting ? 1 : 0.97 }}
-                        className="w-full py-4 bg-gradient-to-r from-yellow-400 to-yellow-300 text-black font-black text-sm uppercase tracking-widest rounded-xl flex items-center justify-center gap-2 shadow-xl shadow-yellow-400/20 hover:shadow-yellow-400/40 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+                        className="w-full py-3.5 lg:py-3 bg-gradient-to-r from-yellow-400 to-yellow-300 text-black font-black text-sm uppercase tracking-widest rounded-xl flex items-center justify-center gap-2 shadow-xl shadow-yellow-400/20 hover:shadow-yellow-400/40 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
                       >
                         {submitting ? (
                           <><Loader2 size={15} className="animate-spin" /> Sending…</>

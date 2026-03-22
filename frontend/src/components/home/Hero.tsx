@@ -1,6 +1,6 @@
 'use client';
 import { motion } from "framer-motion";
-
+import LightPillButton from "@/components/ui/LightPillButton";
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -53,9 +53,9 @@ const HeroSection: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   className="inline-flex items-center self-start gap-2 px-5 py-2.5 border border-slate-900/10 rounded-full mb-8 bg-[#ffe586]"
                 >
-                  <div className="w-1.5 h-1.5 bg-amber-600 rounded-full animate-pulse" />
+                  <div className="w-1.5 h-1.5 bg-amber-700 rounded-full animate-pulse" />
                   <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-900">
-                    New In Bengaluru
+                    New In Anantapur
                   </span>
                 </motion.div>
 
@@ -63,12 +63,12 @@ const HeroSection: React.FC = () => {
           <div>
             <h1 className="text-4xl lg:text-6xl font-extrabold text-slate-900 leading-[1.15] mb-4">
               Growing to <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e2ad01] to-[#f5e502]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FDC700] to-[#FF8C00]">
                 Serve You Better.
               </span>
             </h1>
             <p className="text-lg font-medium text-slate-800 mb-2">
-              10 Clinics in Hyderabad, 5 New Clinics in Bangalore
+              New Clinics in Telugu States
             </p>
             <p className="text-slate-500 leading-relaxed max-w-md">
               Expert care and pain-free smiles are now always within reach from the best dental clinic chain in the region.
@@ -89,16 +89,7 @@ const HeroSection: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 pt-2">
-            <Link href="/book-appointment">
-              <motion.button
-                whileHover={{ x: 5 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full cursor-pointer md:w-auto mr-2 group flex items-center justify-center gap-3 bg-[#fdc700] text-slate-900 px-8 py-5 rounded-xl font-bold text-sm shadow-xl hover:shadow-[#FAE01A]/20 transition-all"
-              >
-                ENQUIRE NOW
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
-            </Link>
+          <LightPillButton text="Enquire Now" href="/contact" />
           </div>
 
           {/* Stats Divider Line */}

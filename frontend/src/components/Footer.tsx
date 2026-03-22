@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import Image from "next/image"
+
 import {
   Instagram,
   Facebook,
@@ -24,15 +26,15 @@ type BranchInfo = { address: string; phone: string; email: string; };
 type BranchData = { [key: string]: BranchInfo; };
 
 const BRANCH_DATA: BranchData = {
-  "Sarjapur Road": {
-    address: "3rd Floor, Gurumurthy Reddy Complex, 5, Sarjapur - Marathahalli Road, Doddakannelli, Bengaluru 560035",
+  "Anantapur": {
+    address: "1st Floor, Lakshmi Bazar, 9-2-291, Anantapur Rd, beside Union Bank, J.R.S Colony, Rayadurgam, Andhra Pradesh 515865",
     phone: "+91 923 695 2369",
-    email: "hydndc@gmail.com"
+    email: "info@dharmadentalcare.com"
   },
   "Vanasthalipuram": {
     address: "National Dental Care, 3rd Floor, Above D Mart, Vanasthalipuram, Hyderabad 500070",
     phone: "+91 903 005 2369",
-    email: "hydndc@gmail.com"
+    email: "info@dharmadentalcare.com"
   },
   "Kondapur": {
     address: "Block 1, DivyaSree Omega, Survey No 13, Kothaguda, Kondapur, Hyderabad 500084",
@@ -84,7 +86,7 @@ const FooterLink = ({ href, children, isDropdown = false }: FooterLinkProps) => 
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const [selectedBranch, setSelectedBranch] = useState("Sarjapur Road");
+  const [selectedBranch, setSelectedBranch] = useState("Anantapur");
   const [email, setEmail] = useState('');
   const [subState, setSubState] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
@@ -124,14 +126,15 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="lg:col-span-5 space-y-6">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-yellow-400 rounded-2xl flex items-center justify-center shadow-lg shadow-yellow-400/10">
-                <Stethoscope size={28} className="text-black" />
-              </div>
-              <div>
-                <span className="text-2xl font-black tracking-tighter text-white block leading-none">Dharma Dental</span>
-                <span className="text-[10px] uppercase tracking-[0.3em] text-yellow-500 font-bold">Excellence in Care</span>
-              </div>
+          <Link href="/" className="flex items-center shrink-0 cursor-pointer">
+              <Image
+                src="/logo.webp"
+                alt="Dharma Dental Care"
+                width={160}
+                height={50}
+                className="xl:w-[180px] xl:h-auto object-contain"
+                priority
+              />
             </Link>
             <p className="text-slate-400 text-base leading-relaxed max-w-md italic font-serif">
               Transforming smiles with world-class dental technology and personalized care across multiple branches.

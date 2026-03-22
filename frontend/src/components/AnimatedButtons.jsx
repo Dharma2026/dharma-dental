@@ -27,6 +27,7 @@ const ToothIcon = ({ size = 18, className = "" }) => (
     <path d="M10 13a2 2 0 0 0 4 0" />
   </svg>
 );
+
 const ButtonWrapper = ({ 
   href, 
   onClick, 
@@ -86,7 +87,7 @@ export const ArrowButton = ({
       href={href}
       onClick={onClick}
       className={`flex items-center gap-2 px-8 py-4 bg-yellow-400 hover:bg-yellow-500 
-      transition-colors duration-300  text-gray-900 font-bold rounded-full shadow-lg overflow-hidden ${className}`}
+      transition-colors duration-300 text-gray-900 font-bold rounded-full shadow-lg overflow-hidden ${className}`}
     >
       <span>{label}</span>
       <motion.div variants={{ hover: { x: 5, scale: 1.2 } }}>
@@ -122,6 +123,50 @@ export const GlowButton = ({
   </motion.div>
 );
 
+// 4. BRAND PILL BUTTON (Dark background with gold accent)
+export const LightPillButton = ({ 
+  label = "Book Your Exam", 
+  href, 
+  onClick, 
+  className = "" 
+}) => (
+  <motion.div whileHover="hover" whileTap={{ scale: 0.96 }} className="inline-block">
+    <ButtonWrapper
+      href={href}
+      onClick={onClick}
+      className={`group relative px-10 py-4 rounded-full border-2 border-[#FDC700] bg-[#18181B] overflow-hidden flex items-center gap-3 shadow-[0_4px_14px_0_rgba(253,199,0,0.2)] hover:shadow-[0_6px_20px_rgba(253,199,0,0.3)] transition-shadow duration-300 ${className}`}
+    >
+      {/* Button Text */}
+      <span className="relative z-10 text-white font-bold transition-colors duration-300 group-hover:text-black">
+        {label}
+      </span>
+
+      {/* Animated Icon */}
+      <motion.div
+        variants={{ hover: { x: 5 } }}
+        className="relative z-10 text-[#FDC700] group-hover:text-black transition-colors duration-300"
+      >
+        <ArrowRight className="w-5 h-5" />
+      </motion.div>
+
+      {/* Background Fill Animation */}
+      <motion.div
+        variants={{ hover: { x: 0 } }}
+        initial={{ x: "-100%" }}
+        transition={{ type: "tween", ease: "circOut", duration: 0.4 }}
+        className="absolute inset-0 bg-[#FDC700]"
+      />
+
+      {/* Subtle Ambient Glow on Hover */}
+      <motion.div
+        variants={{ hover: { opacity: 0.25, scale: 1.1 } }}
+        initial={{ opacity: 0, scale: 1 }}
+        className="absolute inset-0 bg-[#FDC700] blur-xl -z-10"
+      />
+    </ButtonWrapper>
+  </motion.div>
+);
+
 // --- DEMO PAGE ---
 const AnimatedButtonsDemo = () => {
   return (
@@ -143,6 +188,11 @@ const AnimatedButtonsDemo = () => {
           label="Contact Us" 
           href="/contact" 
         />
+
+        <LightPillButton 
+          label="Book Your Exam" 
+          href="/booking" 
+        />
       </div>
 
       <div className="mt-10 p-6 bg-white rounded-xl border border-gray-200 shadow-sm max-w-2xl w-full">
@@ -152,6 +202,12 @@ const AnimatedButtonsDemo = () => {
             <p className="text-sm text-gray-500 mb-1 font-mono">// To navigate to a page:</p>
             <code className="block bg-gray-100 p-2 rounded text-xs">
               {`<ShimmerButton label="Book Now" href="/booking" />`}
+            </code>
+          </div>
+          <div>
+            <p className="text-sm text-gray-500 mb-1 font-mono">// Brand Pill Button (dark + gold):</p>
+            <code className="block bg-gray-100 p-2 rounded text-xs">
+              {`<LightPillButton label="Book Your Exam" href="/booking" />`}
             </code>
           </div>
         </div>

@@ -155,7 +155,7 @@ export default function Testimonials() {
         {/* HEADER & TABS */}
         <div className="text-center space-y-8 mb-20">
           <h2 className="text-5xl md:text-6xl font-black text-white tracking-tighter">
-            Patient <span className="text-yellow-400">Testimonials</span>
+            Patient <span className="bg-gradient-to-r from-[#FDC700] to-[#5A4200] bg-clip-text text-transparent">Testimonials</span>
           </h2>
           
           <div className="inline-flex items-center bg-slate-900/50 p-1.5 rounded-full border border-slate-800 backdrop-blur-sm">

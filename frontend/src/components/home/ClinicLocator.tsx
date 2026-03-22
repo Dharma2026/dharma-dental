@@ -18,7 +18,7 @@ import {
  * Features: Branch selection, embedded Google Maps, direct navigation links
  */
 
-type BranchKey = 'sarjapur' | 'vanasthalipuram' | 'kondapur' | 'whitefield';
+type BranchKey = 'Anantapur' | 'vanasthalipuram' | 'kondapur' | 'whitefield';
 
 interface ClinicInfo {
   name: string;
@@ -32,13 +32,13 @@ interface ClinicInfo {
 type ClinicDataType = Record<BranchKey, ClinicInfo>;
 
 const CLINIC_DATA: ClinicDataType = {
-  sarjapur: {
-    name: "Dharma Dental - Sarjapur",
-    address: "3rd Floor, Gurumurthy Reddy Complex, 5,, Sarjapur - Marathahalli Road, Janantha Colony, Doddakannelli,, Bengaluru, Karnataka 560035",
+  Anantapur: {
+    name: "Dharma Dental - Anantapur",
+    address: "1st Floor, Lakshmi Bazar, 9-2-291, Anantapur Rd, beside Union Bank, J.R.S Colony, Rayadurgam, Andhra Pradesh 515865",
     phone: "+91 923 695 2369",
     email: "hydndc@gmail.com",
-    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15559.336795255318!2d77.77862131151214!3d12.853983219269713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae72e11fe62b7f%3A0x90fb58b42c41430f!2sSarjapura%2C%20Bengaluru%2C%20Karnataka%20562125!5e0!3m2!1sen!2sin!4v1771443264108!5m2!1sen!2sin",
-    directLink: "https://maps.app.goo.gl/HxLK9TaTaGxDuorz9"
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.277239945468!2d76.85123967457467!3d14.69690757471254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb7350ddbb6c69d%3A0x3e82cad58f09dee2!2sDharma%20Dental%20%26%20Hair%20Super%20Speciality%20Hospital!5e0!3m2!1sen!2sin!4v1774057486531!5m2!1sen!2sin",
+    directLink: "https://maps.app.goo.gl/9HTbocL1h2uQofTv5"
   },
   vanasthalipuram: {
     name: "Dharma Dental - Vanasthalipuram",
@@ -67,7 +67,7 @@ const CLINIC_DATA: ClinicDataType = {
 };
 
 export default function ClinicLocator() {
-  const [selectedBranch, setSelectedBranch] = useState<BranchKey>('sarjapur');
+  const [selectedBranch, setSelectedBranch] = useState<BranchKey>('Anantapur');
   const [isMapLoading, setIsMapLoading] = useState(true);
   const branch = CLINIC_DATA[selectedBranch];
 
@@ -111,7 +111,7 @@ export default function ClinicLocator() {
               onChange={(e) => setSelectedBranch(e.target.value as BranchKey)}
               className="w-full appearance-none bg-slate-50 border border-slate-200 text-slate-900 px-6 py-4 rounded-2xl focus:outline-none focus:border-yellow-500 transition-all cursor-pointer font-bold tracking-wide shadow-sm"
             >
-              <option value="sarjapur">Sarjapur Clinic</option>
+              <option value="Anantapur">Anantapur Clinic</option>
               <option value="vanasthalipuram">Vanasthalipuram Clinic</option>
               <option value="kondapur">Kondapur Clinic</option>
               <option value="whitefield">Whitefield Clinic</option>
@@ -225,10 +225,10 @@ export default function ClinicLocator() {
           <div className="relative rounded-[2.5rem] overflow-hidden border border-slate-200 shadow-xl bg-slate-50 aspect-square lg:aspect-video xl:aspect-square">
             
             {/* Map Indicator */}
-            <div className="absolute top-6 left-6 z-20 px-4 py-2 bg-white/90 backdrop-blur-md rounded-full border border-slate-200 flex items-center gap-2 shadow-sm">
+            {/* <div className="absolute top-6 left-6 z-20 px-4 py-2 bg-white/90 backdrop-blur-md rounded-full border border-slate-200 flex items-center gap-2 shadow-sm">
               <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
               <span className="text-[10px] font-bold uppercase tracking-widest text-slate-700">Interactive Map</span>
-            </div>
+            </div> */}
 
             {/* Loading Spinner */}
             {isMapLoading && (

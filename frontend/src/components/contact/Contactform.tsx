@@ -235,7 +235,7 @@ export default function ContactSection() {
             <div className="grid grid-cols-1 gap-4 mb-12">
               {[
                 { icon: Phone, label: 'Immediate Assistance', val: '+91 91692 69369', color: 'bg-yellow-50 text-yellow-600' },
-                { icon: Mail, label: 'Concierge Support', val: 'hydndc@gmail.com', color: 'bg-blue-50 text-blue-600' },
+                { icon: Mail, label: 'Concierge Support', val: 'info@dharmadentalcare.com', color: 'bg-blue-50 text-blue-600' },
                 { icon: MapPin, label: 'Premium Locations', val: 'Hyderabad & Bengaluru', color: 'bg-indigo-50 text-indigo-600' },
               ].map((item, idx) => (
                 <motion.div
