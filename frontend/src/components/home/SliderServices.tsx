@@ -36,7 +36,7 @@ const DENTAL_SERVICES: Service[] = [
   {
     id: 3,
     title: "Invisible Braces & Clear Aligners",
-    slug: "clear-aligners",
+    slug: "orthodontics-and-braces",
     image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=1200",
     description: "Straighten your teeth discreetly with modern clear aligner technology for a perfect smile."
   },
@@ -133,7 +133,7 @@ const ServicesSliderSection: React.FC<ServicesSliderSectionProps> = ({ services 
                 >
                   <div className="w-1.5 h-1.5 bg-amber-600 rounded-full animate-pulse" />
                   <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-900">
-                    Premium Services
+                    Premium Treatments
                   </span>
                 </motion.div>
 
@@ -189,7 +189,7 @@ const ServicesSliderSection: React.FC<ServicesSliderSectionProps> = ({ services 
                     whileTap={{ scale: 0.98 }}
                     className="w-full cursor-pointer md:w-auto mr-2 group flex items-center uppercase justify-center gap-3 bg-[#fdc700] text-slate-900 px-8 py-5 rounded-xl font-bold text-sm shadow-xl hover:shadow-[#FAE01A]/20 transition-all"
                   >
-                    View All Services
+                    View All Treatments
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </motion.button>
                 </Link>
@@ -265,7 +265,7 @@ const ServicesSliderSection: React.FC<ServicesSliderSectionProps> = ({ services 
                           className="object-cover transition-transform duration-700 group-hover:scale-105"
                           sizes="(max-width: 768px) 100vw, 33vw"
                         />
-                        <Link href={`/services/${displayServices[idx].slug}`}>
+                        <Link href={`/treatments/${displayServices[idx].slug}`}>
                           <motion.div 
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}

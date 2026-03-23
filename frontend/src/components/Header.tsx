@@ -22,10 +22,10 @@ const TREATMENTS = [
   { name: "General Dentistry", href: "/treatments/general-dentistry" },
   { name: "Pediatric Dentistry", href: "/treatments/pediatric-dentistry" },
   { name: "Root Canal Treatment", href: "/treatments/root-canal" },
-  { name: "Dental Implants", href: "/services/dental-implants" },
-  { name: "Orthodontics & Braces", href: "/services/orthodontics" },
-  { name: "Clear Aligners", href: "/services/clear-aligners" },
-  { name: "Cosmetic Dentistry", href: "/services/cosmetic-dentistry" }
+  { name: "Dental Implants", href: "/treatments/dental-implants" },
+  { name: "Orthodontics & Braces", href: "/treatments/orthodontics-and-braces" },
+  { name: "Clear Aligners", href: "/treatments/clear-aligners" },
+  { name: "Cosmetic Dentistry", href: "/treatments/cosmetic-dentistry" }
 ];
 
 const BRANCHES = [
@@ -143,7 +143,7 @@ export default function Header() {
             {/* LOGO */}
             <Link href="/" className="flex items-center shrink-0 cursor-pointer">
               <Image
-                src="/logo.webp"
+                src="/dharma-logo.webp"
                 alt="Dharma Dental Care"
                 width={160}
                 height={50}

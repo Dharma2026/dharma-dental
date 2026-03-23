@@ -22,7 +22,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Your Dental Clinic Name",
+  title: "Dharma Dental Care",
   description: "Professional dental care services.",
 };
 

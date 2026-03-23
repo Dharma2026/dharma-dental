@@ -128,7 +128,7 @@ export default function Footer() {
           <div className="lg:col-span-5 space-y-6">
           <Link href="/" className="flex items-center shrink-0 cursor-pointer">
               <Image
-                src="/logo.webp"
+                src="/dharma-logo.webp"
                 alt="Dharma Dental Care"
                 width={160}
                 height={50}
