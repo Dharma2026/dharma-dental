@@ -1,6 +1,6 @@
 'use client';
 
-// app/branches/Anantapur/page.tsx
+// app/branches/hyderabad/page.tsx
 import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -68,16 +68,16 @@ function FadeUp({
 
 const BRANCHES = [
   {
-    id: 'Anantapur',
-    name: 'Anantapur',
-    fullName: 'Dharma Dental — Anantapur',
-    address: 'Anantapur, Anantapur, Telangana',
+    id: 'vanasthalipuram',
+    name: 'Vanasthalipuram',
+    fullName: 'Dharma Dental — Vanasthalipuram',
+    address: 'Vanasthalipuram, Hyderabad, Telangana',
     phone: '+91 923 695 2369',
     email: 'hydndc@gmail.com',
     hours: 'Mon – Sat: 9:00 AM – 8:00 PM',
     sunday: 'Closed',
-    mapsUrl: 'https://maps.google.com/?q=Anantapur+Anantapur',
-    landmark: 'Near Anantapur Bus Stop',
+    mapsUrl: 'https://maps.google.com/?q=Vanasthalipuram+Hyderabad',
+    landmark: 'Near Vanasthalipuram Bus Stop',
     parking: 'Free street parking available',
     color: 'from-yellow-400/20 to-yellow-400/5',
     border: 'border-yellow-400/30',
@@ -87,16 +87,16 @@ const BRANCHES = [
     established: '2008',
   },
   {
-    id: 'Anantapur',
-    name: 'Anantapur',
-    fullName: 'Dharma Dental — Anantapur',
-    address: 'Anantapur, Anantapur, Telangana',
+    id: 'kondapur',
+    name: 'Kondapur',
+    fullName: 'Dharma Dental — Kondapur',
+    address: 'Kondapur, Hyderabad, Telangana',
     phone: '+91 923 695 2370',
-    email: 'Anantapur@dharmadentalcare.com',
+    email: 'kondapur@dharmadentalcare.com',
     hours: 'Mon – Sat: 9:00 AM – 8:00 PM',
     sunday: 'Closed',
-    mapsUrl: 'https://maps.google.com/?q=Anantapur+Anantapur',
-    landmark: 'Near Anantapur Junction, HITEC City Area',
+    mapsUrl: 'https://maps.google.com/?q=Kondapur+Hyderabad',
+    landmark: 'Near Kondapur Junction, HITEC City Area',
     parking: 'Dedicated clinic parking',
     color: 'from-blue-400/20 to-blue-400/5',
     border: 'border-blue-400/30',
@@ -128,11 +128,11 @@ const AMENITIES = [
 ];
 
 const NEARBY_AREAS = {
-  Anantapur: [
+  vanasthalipuram: [
     'LB Nagar', 'Saroornagar', 'Dilsukhnagar', 'Nagole',
     'Hayathnagar', 'Gaddiannaram', 'Champapet', 'Kothapet',
   ],
-  Anantapur: [
+  kondapur: [
     'HITEC City', 'Gachibowli', 'Madhapur', 'Jubilee Hills',
     'Banjara Hills', 'Manikonda', 'Nanakramguda', 'Financial District',
   ],
@@ -140,35 +140,35 @@ const NEARBY_AREAS = {
 
 const FAQS = [
   {
-    q: 'Do I need to book an appointment at the Anantapur clinics?',
+    q: 'Do I need to book an appointment at the Hyderabad clinics?',
     a: 'We strongly recommend booking an appointment to minimise your waiting time. However, we do accept walk-in patients for emergency dental care. Call the specific branch or book online — we typically confirm slots within minutes.',
   },
   {
-    q: 'Are the same treatments available at both Anantapur branches?',
-    a: 'Yes. Both Anantapur and Anantapur branches offer the full range of Dharma Dental treatments — from general dentistry and root canals to dental implants, orthodontics, and cosmetic procedures. Both branches have digital X-ray facilities and specialist doctors.',
+    q: 'Are the same treatments available at both Hyderabad branches?',
+    a: 'Yes. Both Vanasthalipuram and Kondapur branches offer the full range of Dharma Dental treatments — from general dentistry and root canals to dental implants, orthodontics, and cosmetic procedures. Both branches have digital X-ray facilities and specialist doctors.',
   },
   {
-    q: 'Do you offer emergency dental care in Anantapur?',
-    a: 'Yes. Both Anantapur branches accept dental emergencies including severe toothache, broken teeth, lost fillings, and dental abscesses. Call ahead so we can prepare for your arrival. Walk-ins for emergencies are always welcome.',
+    q: 'Do you offer emergency dental care in Hyderabad?',
+    a: 'Yes. Both Hyderabad branches accept dental emergencies including severe toothache, broken teeth, lost fillings, and dental abscesses. Call ahead so we can prepare for your arrival. Walk-ins for emergencies are always welcome.',
   },
   {
     q: 'What payment methods do you accept?',
     a: 'We accept all major payment methods — cash, debit and credit cards, net banking, UPI (PhonePe, GPay, Paytm), and no-cost EMI through partner banks. Ask our front desk team for current EMI options.',
   },
   {
-    q: 'Are the doctors at the Anantapur clinics the same as other branches?',
+    q: 'Are the doctors at the Hyderabad clinics the same as other branches?',
     a: 'Dharma Dental maintains the same clinical standards, protocols, and patient experience across all branches. Specialist doctors are posted at each branch, and complex cases may be coordinated with specialists across locations as required.',
   },
   {
-    q: 'Is there parking available at the Anantapur clinics?',
-    a: 'Anantapur has dedicated clinic parking. Anantapur has free street parking available nearby. Both clinics are also accessible by auto-rickshaw and cab.',
+    q: 'Is there parking available at the Hyderabad clinics?',
+    a: 'Kondapur has dedicated clinic parking. Vanasthalipuram has free street parking available nearby. Both clinics are also accessible by auto-rickshaw and cab.',
   },
 ];
 
 const STATS = [
-  { value: '22+',  label: 'Years in Anantapur' },
-  { value: '2',    label: 'Anantapur Branches' },
-  { value: '50k+', label: 'Anantapur Patients' },
+  { value: '22+',  label: 'Years in Hyderabad' },
+  { value: '2',    label: 'Hyderabad Branches' },
+  { value: '50k+', label: 'Hyderabad Patients' },
   { value: '4.9★', label: 'Google Rating' },
 ];
 
@@ -180,14 +180,14 @@ const TEAM_HIGHLIGHTS = [
 ];
 
 const TRANSPORT = {
-  Anantapur: [
-    { mode: 'Bus', icon: Bus,   detail: 'Multiple TSRTC routes stop at Anantapur Bus Stand — 2 min walk' },
+  vanasthalipuram: [
+    { mode: 'Bus', icon: Bus,   detail: 'Multiple TSRTC routes stop at Vanasthalipuram Bus Stand — 2 min walk' },
     { mode: 'Auto / Cab', icon: Car, detail: 'Easily accessible by Ola/Uber from LB Nagar Metro (10 min)' },
     { mode: 'Metro', icon: Train, detail: 'Nearest metro: LB Nagar (Blue Line) — cab/auto recommended for last mile' },
   ],
-  Anantapur: [
-    { mode: 'Metro', icon: Train, detail: 'Nearest metro: Raidurg (Orange Line, Anantapur Metro) — 5 min cab/auto' },
-    { mode: 'Bus', icon: Bus,    detail: 'TSRTC routes connect Anantapur to most parts of Anantapur' },
+  kondapur: [
+    { mode: 'Metro', icon: Train, detail: 'Nearest metro: Raidurg (Orange Line, Hyderabad Metro) — 5 min cab/auto' },
+    { mode: 'Bus', icon: Bus,    detail: 'TSRTC routes connect Kondapur to most parts of Hyderabad' },
     { mode: 'Cab', icon: Car,    detail: 'Well-connected by Ola/Uber — Gachibowli, Madhapur within 10 minutes' },
   ],
 };
@@ -220,7 +220,7 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
 
 // ─── Branch Card ─────────────────────────────────────────────────────────────
 
-function BranchCard({ branch, areaKey }: { branch: typeof BRANCHES[0]; areaKey: 'Anantapur' | 'Anantapur' }) {
+function BranchCard({ branch, areaKey }: { branch: typeof BRANCHES[0]; areaKey: 'vanasthalipuram' | 'kondapur' }) {
   return (
     <div className={`bg-gradient-to-b ${branch.color} border ${branch.border} rounded-3xl overflow-hidden`}>
       {/* Branch image placeholder */}
@@ -351,8 +351,8 @@ function BranchCard({ branch, areaKey }: { branch: typeof BRANCHES[0]; areaKey: 
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
-export default function AnantapurPage() {
-  const [activeTab, setActiveTab] = useState<'Anantapur' | 'Anantapur'>('Anantapur');
+export default function HyderabadPage() {
+  const [activeTab, setActiveTab] = useState<'vanasthalipuram' | 'kondapur'>('vanasthalipuram');
 
   return (
     <main className="bg-slate-950 text-white min-h-screen overflow-x-hidden">
@@ -379,7 +379,7 @@ export default function AnantapurPage() {
               <ChevronRight size={12} />
               <Link href="/branches" className="hover:text-yellow-400 transition-colors">Branches</Link>
               <ChevronRight size={12} />
-              <span className="text-yellow-400">Anantapur</span>
+              <span className="text-yellow-400">Hyderabad</span>
             </nav>
           </FadeUp>
 
@@ -389,20 +389,20 @@ export default function AnantapurPage() {
               <FadeUp delay={0.05}>
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-yellow-400/10 border border-yellow-400/20 mb-6">
                   <MapPin size={12} className="text-yellow-400" />
-                  <span className="text-yellow-400 text-[11px] font-black uppercase tracking-widest">Anantapur — 2 Branches</span>
+                  <span className="text-yellow-400 text-[11px] font-black uppercase tracking-widest">Hyderabad — 2 Branches</span>
                 </div>
               </FadeUp>
 
               <FadeUp delay={0.1}>
                 <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black tracking-tight leading-[1.05] mb-6">
                   Dharma Dental<br />
-                  <span className="text-yellow-400">Anantapur.</span>
+                  <span className="text-yellow-400">Hyderabad.</span>
                 </h1>
               </FadeUp>
 
               <FadeUp delay={0.15}>
                 <p className="text-slate-400 text-lg leading-relaxed mb-8 max-w-lg">
-                  World-class dental care at two convenient Anantapur locations — Anantapur and Anantapur. Same exceptional standards, same specialist team, whichever branch is closest to you.
+                  World-class dental care at two convenient Hyderabad locations — Vanasthalipuram and Kondapur. Same exceptional standards, same specialist team, whichever branch is closest to you.
                 </p>
               </FadeUp>
 
@@ -440,10 +440,10 @@ export default function AnantapurPage() {
               <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800 border border-white/8 h-[420px]">
                 <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/5 via-transparent to-blue-500/8" />
 
-                {/* Anantapur city visual */}
+                {/* Hyderabad city visual */}
                 <Image
-                  src="/images/Anantapur-city.jpg"
-                  alt="Anantapur City — Dharma Dental"
+                  src="/images/hyderabad-city.jpg"
+                  alt="Hyderabad City — Dharma Dental"
                   fill
                   className="object-cover opacity-40"
                   onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
@@ -452,7 +452,7 @@ export default function AnantapurPage() {
                 {/* Branch pins */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 p-8">
                   <div className="text-center">
-                    <p className="text-slate-500 text-xs font-bold uppercase tracking-widest mb-4">2 Clinics in Anantapur</p>
+                    <p className="text-slate-500 text-xs font-bold uppercase tracking-widest mb-4">2 Clinics in Hyderabad</p>
                   </div>
                   {BRANCHES.map((b) => (
                     <motion.div
@@ -527,10 +527,10 @@ export default function AnantapurPage() {
             </div>
             <h2 className="text-3xl lg:text-4xl font-black tracking-tight">
               Two Clinics Serving<br />
-              <span className="text-yellow-400">All of Anantapur.</span>
+              <span className="text-yellow-400">All of Hyderabad.</span>
             </h2>
             <p className="text-slate-400 max-w-xl mx-auto mt-4 leading-relaxed">
-              Whether you&apos;re in the eastern suburbs or the tech corridor — Dharma Dental Anantapur is close by, with the same specialist team and clinical standards at both locations.
+              Whether you&apos;re in the eastern suburbs or the tech corridor — Dharma Dental Hyderabad is close by, with the same specialist team and clinical standards at both locations.
             </p>
           </FadeUp>
 
@@ -539,7 +539,7 @@ export default function AnantapurPage() {
             {BRANCHES.map((b) => (
               <button
                 key={b.id}
-                onClick={() => setActiveTab(b.id as 'Anantapur' | 'Anantapur')}
+                onClick={() => setActiveTab(b.id as 'vanasthalipuram' | 'kondapur')}
                 className={`flex-1 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider transition-all ${
                   activeTab === b.id
                     ? 'bg-yellow-400 text-black shadow-lg shadow-yellow-400/20'
@@ -554,8 +554,8 @@ export default function AnantapurPage() {
           {/* Desktop — side by side */}
           <div className="hidden lg:grid lg:grid-cols-2 gap-6">
             {BRANCHES.map((branch) => (
-              <FadeUp key={branch.id} delay={branch.id === 'Anantapur' ? 0 : 0.1}>
-                <BranchCard branch={branch} areaKey={branch.id as 'Anantapur' | 'Anantapur'} />
+              <FadeUp key={branch.id} delay={branch.id === 'vanasthalipuram' ? 0 : 0.1}>
+                <BranchCard branch={branch} areaKey={branch.id as 'vanasthalipuram' | 'kondapur'} />
               </FadeUp>
             ))}
           </div>
@@ -563,7 +563,7 @@ export default function AnantapurPage() {
           {/* Mobile — tabbed */}
           <div className="lg:hidden">
             {BRANCHES.filter((b) => b.id === activeTab).map((branch) => (
-              <BranchCard key={branch.id} branch={branch} areaKey={branch.id as 'Anantapur' | 'Anantapur'} />
+              <BranchCard key={branch.id} branch={branch} areaKey={branch.id as 'vanasthalipuram' | 'kondapur'} />
             ))}
           </div>
         </div>
@@ -589,7 +589,7 @@ export default function AnantapurPage() {
                   <div className="relative bg-slate-900 h-64 flex items-center justify-center">
                     <div className="text-center">
                       <MapPin size={32} className={`${branch.accent} mx-auto mb-3`} />
-                      <p className="text-white font-bold text-sm mb-1">{branch.name}, Anantapur</p>
+                      <p className="text-white font-bold text-sm mb-1">{branch.name}, Hyderabad</p>
                       <p className="text-slate-500 text-xs mb-4">{branch.address}</p>
                       <a
                         href={branch.mapsUrl}
@@ -632,7 +632,7 @@ export default function AnantapurPage() {
               <span className="text-yellow-400">Both Locations.</span>
             </h2>
             <p className="text-slate-400 max-w-lg mx-auto mt-4 leading-relaxed">
-              The full Dharma Dental treatment menu is available at both Anantapur branches.
+              The full Dharma Dental treatment menu is available at both Hyderabad branches.
             </p>
           </FadeUp>
 
@@ -702,17 +702,17 @@ export default function AnantapurPage() {
             <FadeUp>
               <div className="space-y-5">
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10">
-                  <span className="text-slate-400 text-[11px] font-black uppercase tracking-widest">Our Anantapur Team</span>
+                  <span className="text-slate-400 text-[11px] font-black uppercase tracking-widest">Our Hyderabad Team</span>
                 </div>
                 <h2 className="text-3xl lg:text-4xl font-black tracking-tight leading-tight">
                   Specialists Who Put<br />
                   <span className="text-yellow-400">Your Health First.</span>
                 </h2>
                 <p className="text-slate-400 leading-relaxed">
-                  Both Anantapur branches are staffed by qualified, experienced dental professionals — BDS and MDS-trained doctors with specialist expertise across all treatment areas. Our team follows the same protocols and clinical standards that have made Dharma Dental the most trusted dental group in the region.
+                  Both Hyderabad branches are staffed by qualified, experienced dental professionals — BDS and MDS-trained doctors with specialist expertise across all treatment areas. Our team follows the same protocols and clinical standards that have made Dharma Dental the most trusted dental group in the region.
                 </p>
                 <p className="text-slate-400 leading-relaxed">
-                  We believe dentistry should be comfortable, transparent, and patient-led. Every doctor at our Anantapur clinics takes the time to explain your diagnosis, discuss your options, and obtain your fully informed consent before any treatment begins.
+                  We believe dentistry should be comfortable, transparent, and patient-led. Every doctor at our Hyderabad clinics takes the time to explain your diagnosis, discuss your options, and obtain your fully informed consent before any treatment begins.
                 </p>
                 <Link
                   href="/contact"
@@ -809,12 +809,12 @@ export default function AnantapurPage() {
               </div>
               <div className="relative flex flex-col lg:flex-row items-center justify-between gap-8">
                 <div>
-                  <p className="text-black/60 text-sm font-bold uppercase tracking-widest mb-2">Anantapur — 2 Locations</p>
+                  <p className="text-black/60 text-sm font-bold uppercase tracking-widest mb-2">Hyderabad — 2 Locations</p>
                   <h2 className="text-3xl lg:text-4xl font-black text-black tracking-tight leading-tight">
                     Your Nearest Dharma Dental<br />Is Closer Than You Think.
                   </h2>
                   <p className="text-black/70 mt-3 max-w-md leading-relaxed">
-                    Book a free consultation at your nearest Anantapur branch — Anantapur or Anantapur. Same-day appointments often available for new patients.
+                    Book a free consultation at your nearest Hyderabad branch — Vanasthalipuram or Kondapur. Same-day appointments often available for new patients.
                   </p>
                   <div className="flex flex-wrap gap-4 mt-4">
                     {['Free Consultation', 'Same-Day Slots', 'All Specialists', 'EMI Available'].map((item) => (
@@ -854,7 +854,7 @@ export default function AnantapurPage() {
             </div>
             <h2 className="text-3xl lg:text-4xl font-black tracking-tight">
               Questions About Our<br />
-              <span className="text-yellow-400">Anantapur Clinics.</span>
+              <span className="text-yellow-400">Hyderabad Clinics.</span>
             </h2>
           </FadeUp>
 
