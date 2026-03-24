@@ -22,44 +22,51 @@ const DENTAL_SERVICES: Service[] = [
   {
     id: 1,
     title: "Advanced Teeth Whitening Solutions",
-    slug: "teeth-whitening",
-    image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=1200",
+    slug: "general-dentistry",
+    image: "/treatments/general/general-dentistry-slide.webp",
     description: "Professional whitening treatments that brighten your smile by several shades with long-lasting results."
   },
   {
     id: 2,
     title: "Dental Implants & Full Restoration",
     slug: "dental-implants",
-    image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=1200",
+    image: "/treatments/implants/dental-implants-slide.webp",
     description: "Permanent tooth replacement solutions that look, feel, and function just like your natural teeth."
   },
   {
     id: 3,
     title: "Invisible Braces & Clear Aligners",
     slug: "orthodontics-and-braces",
-    image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=1200",
+    image: "/treatments/orthodontics/orthodontics-and-braces-slide.webp",
     description: "Straighten your teeth discreetly with modern clear aligner technology for a perfect smile."
   },
   {
     id: 4,
     title: "Cosmetic Dentistry & Smile Makeover",
     slug: "cosmetic-dentistry",
-    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1200",
+    image: "/treatments/cosmetic/cosmetic-dentistry-slide.webp",
     description: "Transform your smile with veneers, bonding, and comprehensive cosmetic procedures."
   },
   {
     id: 5,
     title: "Root Canal Treatment & Endodontics",
     slug: "root-canal",
-    image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=1200",
+    image: "/treatments/rootcanal/root-canal-slide.webp",
     description: "Pain-free root canal procedures using advanced technology to save your natural teeth."
   },
   {
     id: 6,
     title: "Pediatric Dentistry & Kids Care",
     slug: "pediatric-dentistry",
-    image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=1200",
+    image: "/treatments/pedistry/pediatric-dentistry-slide.webp",
     description: "Gentle, child-friendly dental care in a fun environment for your little ones."
+  },
+  {
+    id: 7,
+    title: "Straight Teeth Zero Compromise",
+    slug: "clear-aligners",
+    image: "/treatments/aligners/clear-aligners-slide.webp",
+    description: "Our clear aligner packages are tiered by complexity."
   }
 ];
 

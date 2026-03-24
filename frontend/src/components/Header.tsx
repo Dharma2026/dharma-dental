@@ -29,7 +29,7 @@ const TREATMENTS = [
 ];
 
 const BRANCHES = [
-  { name: "Sarjapur Road", href: "/contact?branch=sarjapur" },
+  { name: "Anantapur", href: "/branches/anantapur" },
   { name: "Vanasthalipuram", href: "/contact?branch=vanasthalipuram" },
   { name: "Kondapur", href: "/contact?branch=kondapur" },
   { name: "Whitefield", href: "/contact?branch=whitefield" }
