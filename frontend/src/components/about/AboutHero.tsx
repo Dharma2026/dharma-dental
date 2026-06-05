@@ -60,7 +60,7 @@ export default function AboutHero() {
         </div>
 
         {/* Main heading */}
-        <h1 className="text-6xl md:text-8xl font-black text-white mb-10 tracking-tighter leading-none">
+        <h1 className="text-6xl md:text-7xl font-black text-white mb-10 tracking-tighter leading-none">
           About <span className="text-yellow-400 italic">Us</span>
         </h1>
 

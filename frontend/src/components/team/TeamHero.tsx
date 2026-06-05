@@ -60,8 +60,8 @@ export default function TeamHero() {
         </div>
 
         {/* Main heading */}
-        <h1 className="text-6xl md:text-8xl font-black text-white mb-10 tracking-tighter leading-none">
-          Team <span className="text-yellow-400 italic">Us</span>
+        <h1 className="text-6xl md:text-7xl font-black text-white mb-10 tracking-tighter leading-none">
+          Our <span className="text-yellow-400 italic">Doctors</span>
         </h1>
 
         {/* Glassmorphism breadcrumb */}
@@ -75,7 +75,7 @@ export default function TeamHero() {
             <li aria-hidden>
               <ChevronRight size={16} className="text-white/20" />
             </li>
-            <li className="text-white">Team Our Practice</li>
+            <li className="text-white">Our Doctors</li>
           </ol>
         </nav>
       </motion.div>

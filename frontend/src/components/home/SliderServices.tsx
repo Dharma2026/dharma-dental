@@ -121,13 +121,13 @@ const ServicesSliderSection: React.FC<ServicesSliderSectionProps> = ({ services 
     <section className="relative py-20 bg-white overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-yellow-500/30 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-250 h-250 bg-gradient-radial from-yellow-500/30 to-transparent rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Main Grid Container with rounded corners */}
-        <div className="bg-white rounded-[32px] overflow-hidden shadow-2xl">
-          <div className="grid lg:grid-cols-[35%_1fr] py-8 px-8 min-h-[600px]">
+        <div className="bg-white rounded-4xl overflow-hidden shadow-2xl">
+          <div className="grid lg:grid-cols-[35%_1fr] py-8 px-8 min-h-150">
             
             {/* Left Column: Content */}
             <div className="p-10 lg:p-14 flex flex-col justify-between ">
@@ -149,21 +149,21 @@ const ServicesSliderSection: React.FC<ServicesSliderSectionProps> = ({ services 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 }}
-                  className="text-5xl lg:text-6xl xl:text-6xl font-semibold leading-[1.05] tracking-tight text-slate-900 mb-2"
-                >
-                  Treatments That
-                </motion.h2>
-                
-               
+                  className="text-4xl lg:text-[34px] font-extrabold text-slate-900 leading-tight mb-4">
+
+                  Dental Treatments at <br/>
+                  <span className="text-4xl lg:text-[34px]  text-transparent bg-clip-text bg-linear-to-r from-[#FDC700] to-[#FF8C00]">
+                  Dharma Dental Clinic
+                  </span>                 
+                </motion.h2>      
 
                 {/* Description */}
                 <motion.p 
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.3 }}
-                  className="text-lg text-slate-600 max-w-sm mb-10 leading-relaxed font-medium"
-                >
-                  Discover how Dharma Dental delivers exceptional care across all specialties with cutting-edge technology and personalized treatment plans.
+                  className="text-lg text-slate-600 max-w-sm mb-10 leading-relaxed font-medium">
+                  Comprehensive dental solutions for patients searching for the best dental clinic near me.
                 </motion.p>
 
                 {/* Feature Pills */}
@@ -235,7 +235,7 @@ const ServicesSliderSection: React.FC<ServicesSliderSectionProps> = ({ services 
               {[index, nextIndex].map((idx, i) => (
                 <div 
                   key={i} 
-                  className={`relative overflow-hidden bg-slate-50 ${i === 1 ? 'hidden lg:block' : 'block'}`}
+                  className={`relative overflow-hidden bg-slate-50 min-h-[480px] lg:min-h-0 ${i === 1 ? 'hidden lg:block' : 'block'}`}
                   onMouseEnter={stopAutoplay}
                   onMouseLeave={startAutoplay}
                 >
@@ -264,7 +264,7 @@ const ServicesSliderSection: React.FC<ServicesSliderSectionProps> = ({ services 
                       </div>
                       
                       {/* Image Container */}
-                      <div className="relative flex-1 group overflow-hidden rounded-2xl min-h-[220px]">
+                      <div className="relative flex-1 group overflow-hidden rounded-2xl min-h-55">
                         <Image 
                           src={displayServices[idx].image}
                           alt={displayServices[idx].title}

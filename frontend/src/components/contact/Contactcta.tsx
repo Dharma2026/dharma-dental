@@ -37,15 +37,15 @@ export default function ContactCTA() {
             variants={fadeUp}
             className="text-4xl md:text-5xl font-black text-white tracking-tighter mb-4"
           >
-            Dental Emergency?{' '}
-            <span className="text-yellow-400">Call Us Now.</span>
+            Unsure About{' '}
+            <span className="text-yellow-400">Your Needs?</span>
           </motion.h2>
 
           <motion.p
             variants={fadeUp}
             className="text-slate-400 text-lg font-serif italic mb-10"
           >
-            We offer priority slots for urgent dental care — 6 days a week.
+            If you are unsure which treatment you need, that is completely okay. Start with a consultation, and our team will help you understand the issue clearly and guide you toward the right care plan.dharmadentalcare
           </motion.p>
 
           <motion.a

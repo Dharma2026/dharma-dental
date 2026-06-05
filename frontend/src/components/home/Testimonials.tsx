@@ -224,7 +224,7 @@ export default function Testimonials() {
           {/* HEADER & TABS */}
           <div className="text-center space-y-8 mb-20">
             <h2 className="text-5xl md:text-6xl font-black text-white tracking-tighter">
-              Patient <span className="bg-gradient-to-r from-[#FDC700] to-[#5A4200] bg-clip-text text-transparent">Testimonials</span>
+            Patient Reviews for <span className="bg-linear-to-r from-[#FDC700] to-[#5A4200] bg-clip-text text-transparent">Dharma Dental</span>
             </h2>
             
             <div className="inline-flex items-center bg-slate-900/50 p-1.5 rounded-full border border-slate-800 backdrop-blur-sm">
@@ -246,7 +246,7 @@ export default function Testimonials() {
           </div>
 
           {/* CONTENT AREA */}
-          <div className="min-h-[500px] relative">
+          <div className="min-h-125 relative">
             <AnimatePresence mode="wait">
               {activeTab === 'text' ? (
                 <motion.div
@@ -263,7 +263,7 @@ export default function Testimonials() {
                         key={textIndex}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        className="relative w-full h-[450px]"
+                        className="relative w-full h-112.5"
                       >
                         <Image 
                           src={TEXT_REVIEWS[textIndex].image} 
@@ -273,14 +273,14 @@ export default function Testimonials() {
                           sizes="(max-width: 768px) 100vw, 500px"
                         />
                       </motion.div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                      <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent" />
                     </div>
                     
                     {/* Floating Rating Badge */}
                     <motion.div 
                       initial={{ scale: 0.8, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
-                      className="absolute -bottom-6 -right-6 md:right-0 bg-white p-6 rounded-[2rem] shadow-2xl flex flex-col items-center border border-slate-100 z-20"
+                      className="absolute -bottom-6 -right-6 md:right-0 bg-white p-6 rounded-4xl shadow-2xl flex flex-col items-center border border-slate-100 z-20"
                     >
                       <span className="text-4xl font-black text-slate-900">{TEXT_REVIEWS[textIndex].rating}/5</span>
                       <div className="flex gap-1 text-yellow-500 my-1">
@@ -352,7 +352,7 @@ export default function Testimonials() {
                       {VIDEO_REVIEWS.map((video) => (
                         <div 
                           key={video.id} 
-                          className="w-full md:w-1/3 flex-shrink-0 px-4 group"
+                          className="w-full md:w-1/3 shrink-0 px-4 group"
                         >
                           <div className="relative aspect-video rounded-3xl overflow-hidden border border-slate-800 mb-6 shadow-2xl bg-slate-900">
                             <Image 

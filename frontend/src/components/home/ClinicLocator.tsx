@@ -96,11 +96,11 @@ export default function ClinicLocator() {
                 <Search size={28} />
               </div>
               <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight uppercase">
-                Find a Clinic <span className="text-yellow-500">Near You</span>
+              Find Dharma Dental<span className="text-yellow-500"> Near You</span>
               </h2>
             </div>
             <p className="text-slate-500 max-w-md">
-              Select your preferred branch to see location details and get navigation.
+            Easily locate Dharma Dental Clinic on the map and visit us for expert dental care near you.
             </p>
           </div>
 

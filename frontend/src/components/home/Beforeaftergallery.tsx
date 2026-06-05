@@ -39,7 +39,7 @@ const ComparisonSlider: React.FC<ComparisonSliderProps> = ({ beforeImg, afterImg
     <div className="flex flex-col gap-4">
       <div 
         ref={containerRef}
-        className="relative w-full aspect-[4/5] rounded-[2.5rem] overflow-hidden cursor-ew-resize select-none border border-slate-200 shadow-xl group"
+        className="relative w-full aspect-4/5 rounded-[2.5rem] overflow-hidden cursor-ew-resize select-none border border-slate-200 shadow-xl group"
         onMouseMove={handleMove}
         onTouchMove={handleMove}
       >
@@ -95,8 +95,8 @@ export default function BeforeAfterGallery() {
   const cases: CaseItem[] = [
     {
       id: 1,
-      before: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=600&auto=format&fit=crop",
-      after: "https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=600&auto=format&fit=crop",
+      before: "/home/BA/before-1.webp",
+      after: "/home/BA/after-1.webp",
       label: "Full Smile Reconstruction"
     },
     {
@@ -130,7 +130,7 @@ export default function BeforeAfterGallery() {
             </motion.div>
             <h2 className="text-3xl lg:text-5xl font-bold text-slate-900 leading-[1.2]">
             See The 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e2ad01] to-[#f5e502]"> Transformation</span>
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-[#e2ad01] to-[#f5e502]"> Transformation</span>
             </h2>
           </div>
           <p className="text-slate-500 max-w-sm text-center md:text-right leading-relaxed font-serif  text-lg">

@@ -64,7 +64,7 @@ const TestimonialSection = () => {
           
           {/* Left Side: Image with Rating Card */}
           <div className="relative">
-            <div className="relative z-10 rounded-[40px] overflow-hidden aspect-[4/5] max-w-md mx-auto lg:ml-0">
+            <div className="relative z-10 rounded-[40px] overflow-hidden aspect-4/5 max-w-md mx-auto lg:ml-0">
               <img 
                 src="/Home/testimonial/testimonials-img.jpg" 
                 alt="Patient treatment"
@@ -77,7 +77,7 @@ const TestimonialSection = () => {
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              className="absolute -bottom-8 -left-4 md:left-8 z-20 bg-[#2b89b8] text-white p-8 rounded-[25px] shadow-2xl max-w-[280px]"
+              className="absolute -bottom-8 -left-4 md:left-8 z-20 bg-[#2b89b8] text-white p-8 rounded-[25px] shadow-2xl max-w-70"
             >
               <div className="flex items-end gap-2 mb-4">
                 <span className="text-5xl font-bold leading-none">4.7/5</span>
@@ -104,7 +104,7 @@ const TestimonialSection = () => {
               <Quote className="w-16 h-16 text-blue-100 rotate-180" />
             </div>
 
-            <div className="relative min-h-[300px]">
+            <div className="relative min-h-75">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeIndex}

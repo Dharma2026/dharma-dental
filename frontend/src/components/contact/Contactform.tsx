@@ -184,8 +184,8 @@ export default function ContactSection() {
 
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-[-10%] right-[-10%] w-[800px] h-[800px] bg-yellow-400/8 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-indigo-400/5 rounded-full blur-[120px]" />
+        <div className="absolute top-[-10%] right-[-10%] w-200 h-200 bg-yellow-400/8 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-150 h-150 bg-indigo-400/5 rounded-full blur-[120px]" />
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.025]"
           style={{ backgroundImage: `radial-gradient(#000 1px, transparent 1px)`, backgroundSize: '40px 40px' }}
@@ -212,15 +212,12 @@ export default function ContactSection() {
               transition={{ delay: 0.1 }}
               className="text-5xl lg:text-6xl font-extrabold text-slate-950 leading-[1.1] mb-8 tracking-tight"
             >
-              Elevate Your{' '}
-              <span className="relative inline-block">
-                Smile&apos;s
+              We Are Here{' '}
+              <span className="relative inline-block text-transparent bg-clip-text bg-linear-to-r from-yellow-500 via-yellow-400 to-yellow-600">
+              For You
                 <span className="absolute bottom-2 left-0 w-full h-3 bg-yellow-400/25 -z-10 rounded" />
               </span>
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600">
-                True Potential.
-              </span>
+
             </motion.h2>
 
             <motion.p
@@ -229,7 +226,7 @@ export default function ContactSection() {
               transition={{ delay: 0.2 }}
               className="text-lg text-slate-600 leading-relaxed mb-12 max-w-md"
             >
-              Join 10,000+ happy patients who rediscovered their confidence through our bespoke dental experiences.
+              We welcome patients who are planning routine visits as well as those who need timely attention for pain, discomfort, or urgent dental concerns. Our team is available to guide you toward the right branch and the right next step.dharmadentalcare
             </motion.p>
 
             <div className="grid grid-cols-1 gap-4 mb-12">
@@ -278,7 +275,7 @@ export default function ContactSection() {
             className="w-full lg:w-[55%] lg:sticky lg:top-12"
           >
             {/* Gradient border wrapper */}
-            <div className="relative p-[1px] bg-gradient-to-br from-yellow-200 via-slate-100 to-slate-200 rounded-[2.5rem] shadow-[0_32px_64px_-12px_rgba(0,0,0,0.1)]">
+            <div className="relative p-px bg-linear-to-br from-yellow-200 via-slate-100 to-slate-200 rounded-[2.5rem] shadow-[0_32px_64px_-12px_rgba(0,0,0,0.1)]">
               <div className="bg-white/90 backdrop-blur-xl rounded-[2.4rem] p-8 md:p-12 overflow-hidden relative">
 
                 {/* Card watermark */}
@@ -287,7 +284,7 @@ export default function ContactSection() {
                 </div>
 
                 {/* Top accent line */}
-                <div className="absolute top-0 left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-transparent via-yellow-400 to-transparent rounded-full" />
+                <div className="absolute top-0 left-[10%] right-[10%] h-0.5 bg-linear-to-r from-transparent via-yellow-400 to-transparent rounded-full" />
 
                 {!isSubmitted ? (
                   <form onSubmit={handleSubmit} className="relative z-10 space-y-7">

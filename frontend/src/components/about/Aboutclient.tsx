@@ -2,6 +2,7 @@
 
 // components/contact/AboutClient.tsx
 import AboutHero from '@/components/about/AboutHero';
+import AboutFull from '@/components/about/AboutFull';
 import Aboutsection from '@/components/about/AboutSection';
 import WhatWeDoSection from '@/components/about/WhatWeDoSection';
 import WhyChooseUsSection from '@/components/about/WhyChooseUsSection';
@@ -12,10 +13,9 @@ export default function ContactClient() {
     <main className="bg-white min-h-screen font-sans">
       {/* 1. Hero banner with headline and quick-contact pills */}
       <AboutHero />
-      <Aboutsection/>
-      <WhatWeDoSection/>
-      <WhyChooseUsSection/>
-      <Testimonials/>
+    
+      <AboutFull/>
+     
     </main>
   );
 }

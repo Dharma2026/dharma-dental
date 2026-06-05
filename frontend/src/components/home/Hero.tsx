@@ -38,11 +38,11 @@ const HeroSection: React.FC = () => {
     <div className="relative min-h-screen bg-white font-sans text-slate-900 overflow-hidden flex flex-col pb-20 pt-38">
       
       {/* Decorative background blob */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-teal-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 z-0" />
+      <div className="absolute top-0 right-0 w-150 h-150 bg-teal-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 z-0" />
 
 
       {/* --- Main Content Grid --- */}
-      <main className="flex-grow w-full max-w-7xl mx-auto px-6 pt-8 pb-12 lg:pt-16 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
+      <main className="grow w-full max-w-325 mx-auto px-6 pt-8 pb-12 lg:pt-16 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
         
         {/* LEFT COLUMN: Content */}
         <div className={`flex flex-col space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
@@ -61,17 +61,17 @@ const HeroSection: React.FC = () => {
 
           {/* Headlines */}
           <div>
-            <h1 className="text-4xl lg:text-6xl font-extrabold text-slate-900 leading-[1.15] mb-4">
-              Growing to <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FDC700] to-[#FF8C00]">
-                Serve You Better.
+            <h1 className="text-4xl lg:text-[50px] font-extrabold text-slate-900 leading-none mb-4">
+            Dharma Dental <br/>
+              <span className="text-4xl lg:text-[40px]  text-transparent bg-clip-text bg-linear-to-r from-[#FDC700] to-[#FF8C00]">
+              Best Dental Clinic Near Me for Advanced & Painless
               </span>
             </h1>
             <p className="text-lg font-medium text-slate-800 mb-2">
               New Clinics in Telugu States
             </p>
-            <p className="text-slate-500 leading-relaxed max-w-md">
-              Expert care and pain-free smiles are now always within reach from the best dental clinic chain in the region.
+            <p className="text-slate-500 leading-relaxed max-w-lg">
+            Looking for the best dental clinic near you? At Dharma Dental, we provide expert, affordable, and painless dental treatments using advanced technology and personalized care.
             </p>
           </div>
 
@@ -79,7 +79,7 @@ const HeroSection: React.FC = () => {
           <div className="space-y-3">
             {features.map((item, idx) => (
               <div key={idx} className="flex items-center gap-3 text-slate-700 font-medium">
-                <div className="w-6 h-6 rounded-full bg-[#ffeba5] flex items-center justify-center flex-shrink-0">
+                <div className="w-6 h-6 rounded-full bg-[#ffeba5] flex items-center justify-center shrink-0">
                   <CheckCircle2 size={14} className="text-[#9e7e09]" />
                 </div>
                 {item}
@@ -106,7 +106,7 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* RIGHT COLUMN: Visuals */}
-        <div className={`relative h-full min-h-[500px]  lg:block transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+        <div className={`relative h-full min-h-125  lg:block transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
           
           {/* Main Image with unique shape */}
           <div className="absolute top-0 right-0 w-[90%] h-[85%] rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 z-10">
@@ -119,7 +119,7 @@ const HeroSection: React.FC = () => {
               priority
             />
             {/* Overlay Gradient for text readability if needed */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-slate-900/20 to-transparent" />
           </div>
 
           {/* Secondary Overlapping Image (Creates depth) */}
@@ -147,7 +147,7 @@ const HeroSection: React.FC = () => {
           </div>
 
           {/* Decorative Dot Grid */}
-          <div className="absolute top-[-20px] right-[-20px] z-0">
+          <div className="absolute -top-5 -right-5 z-0">
             <div className="grid grid-cols-6 gap-2 opacity-20">
               {[...Array(36)].map((_, i) => (
                 <div key={i} className="w-1.5 h-1.5 bg-teal-600 rounded-full" />

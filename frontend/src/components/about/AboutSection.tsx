@@ -187,16 +187,14 @@ export default function JourneySection() {
           {/* Heading */}
           <motion.h2
             variants={fadeInUp}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
+            className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-6xl
                        font-black text-slate-900 leading-[1.08] mb-5 sm:mb-6 md:mb-8
                        tracking-tighter"
           >
-            A Journey to <br />
+            About Dharma<br />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-yellow-500 to-orange-400 italic">
-              Your Finest Smile
+            Dental Care
             </span>
-            <br />
-            Starts Here
           </motion.h2>
 
           {/* Body */}
@@ -205,40 +203,11 @@ export default function JourneySection() {
             className="text-slate-500 text-base sm:text-lg md:text-xl
                        leading-relaxed mb-8 sm:mb-10 md:mb-12
                        max-w-lg font-medium"
-          >
-            We synthesize world-class dental expertise with bespoke hospitality. Since 2009,
-            our goal has been to provide high-precision oral care in an environment that
-            feels clinical yet completely restorative.
-          </motion.p>
-
-          {/* Features grid */}
-          <motion.div
-            variants={fadeInUp}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 sm:gap-y-5 md:gap-y-6 gap-x-8 md:gap-x-12"
-          >
-            {FEATURES.map((feature, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ x: 5 }}
-                className="flex items-center gap-3 sm:gap-4 group transition-all cursor-default"
-              >
-                <div className="shrink-0 w-8 h-8 rounded-xl
-                                bg-yellow-50 flex items-center justify-center
-                                text-yellow-500
-                                group-hover:bg-linear-to-br
-                                group-hover:from-yellow-400 group-hover:to-orange-400
-                                group-hover:text-white
-                                transition-all duration-300 shadow-sm">
-                  <CheckCircle2 size={17} strokeWidth={3} />
-                </div>
-                <span className="text-slate-800 font-bold text-base sm:text-lg tracking-tight">
-                  {feature}
-                </span>
-              </motion.div>
-            ))}
-          </motion.div>
-
-         
+          > At Dharma Dental Care, we believe good dentistry is not just about treating
+           teeth — it is about helping people feel comfortable, confident, and cared for
+            at every visit. Our clinic brings together experience, modern technology, and
+             a genuinely patient-first approach to deliver dental care you can trust.
+          </motion.p>         
         </motion.div>
 
       </div>

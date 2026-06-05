@@ -132,12 +132,12 @@ export default function Footer() {
                 alt="Dharma Dental Care"
                 width={160}
                 height={50}
-                className="xl:w-[180px] xl:h-auto object-contain"
+                className="xl:w-45 xl:h-auto object-contain"
                 priority
               />
             </Link>
             <p className="text-slate-400 text-base leading-relaxed max-w-md italic font-serif">
-              Transforming smiles with world-class dental technology and personalized care across multiple branches.
+            Dharma Dental – Best Dental Clinic Near Me for Quality, Affordable & Advanced Dental Care
             </p>
             <div className="flex gap-4 pt-2">
               <SocialIcon Icon={Facebook} href="https://facebook.com" label="Facebook" />
@@ -149,7 +149,7 @@ export default function Footer() {
 
           {/* Subscribe Form */}
           <div className="lg:col-span-7">
-            <div className="p-6 md:p-8 rounded-[2rem] bg-slate-900/30 border border-slate-800 backdrop-blur-md relative overflow-hidden">
+            <div className="p-6 md:p-8 rounded-4xl bg-slate-900/30 border border-slate-800 backdrop-blur-md relative overflow-hidden">
               <div className="absolute top-0 right-0 w-40 h-40 bg-yellow-400/5 rounded-full blur-3xl pointer-events-none" />
 
               <AnimatePresence mode="wait">
@@ -231,23 +231,21 @@ export default function Footer() {
               <FooterLink href="/">Home</FooterLink>
               <FooterLink href="/about">About Us</FooterLink>
               <FooterLink href="/team" isDropdown>Our Doctors</FooterLink>
-              <FooterLink href="/gallery">Smile Gallery</FooterLink>
-              <FooterLink href="/testimonials">Patient Reviews</FooterLink>
+              <FooterLink href="/gallery">Smile Gallery</FooterLink>  
               <FooterLink href="/blog">Blog</FooterLink>
-              <FooterLink href="/faq">FAQs</FooterLink>
             </ul>
           </div>
 
           <div className="space-y-6">
             <h4 className="text-white font-bold text-xs uppercase tracking-[0.2em] border-b border-slate-900 pb-4">Treatments</h4>
             <ul className="space-y-1">
-              <FooterLink href="/services/general-dentistry" isDropdown>General Dentistry</FooterLink>
-              <FooterLink href="/services/pediatric-dentistry" isDropdown>Pediatric Dentistry</FooterLink>
-              <FooterLink href="/services/root-canal" isDropdown>Root Canal Treatment</FooterLink>
-              <FooterLink href="/services/dental-implants" isDropdown>Dental Implants</FooterLink>
-              <FooterLink href="/services/orthodontics" isDropdown>Orthodontics & Braces</FooterLink>
-              <FooterLink href="/services/clear-aligners" isDropdown>Clear Aligners</FooterLink>
-              <FooterLink href="/services/cosmetic-dentistry" isDropdown>Cosmetic Dentistry</FooterLink>
+              <FooterLink href="/treatments/general-dentistry" isDropdown>General Dentistry</FooterLink>
+              <FooterLink href="/treatments/pediatric-dentistry" isDropdown>Pediatric Dentistry</FooterLink>
+              <FooterLink href="/treatments/root-canal" isDropdown>Root Canal Treatment</FooterLink>
+              <FooterLink href="/treatments/dental-implants" isDropdown>Dental Implants</FooterLink>
+              <FooterLink href="/treatments/orthodontics-and-braces" isDropdown>Orthodontics & Braces</FooterLink>
+              <FooterLink href="/treatments/clear-aligners" isDropdown>Clear Aligners</FooterLink>
+              <FooterLink href="/treatments/cosmetic-dentistry" isDropdown>Cosmetic Dentistry</FooterLink>
             </ul>
           </div>
 
@@ -300,11 +298,11 @@ export default function Footer() {
                       {BRANCH_DATA[selectedBranch].phone}
                     </a>
                   </div>
-                  <div className="flex items-center gap-3 text-sm text-slate-400">
+                  <div className="flex items-center gap-3 text-sm text-slate-400 min-w-0">
                     <div className="p-2 bg-yellow-500/10 rounded-lg shrink-0">
                       <Mail size={18} className="text-yellow-500" />
                     </div>
-                    <a href={`mailto:${BRANCH_DATA[selectedBranch].email}`} className="hover:text-yellow-400 transition-colors">
+                    <a href={`mailto:${BRANCH_DATA[selectedBranch].email}`} className="hover:text-yellow-400 transition-colors truncate">
                       {BRANCH_DATA[selectedBranch].email}
                     </a>
                   </div>

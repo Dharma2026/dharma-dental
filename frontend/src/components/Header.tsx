@@ -30,9 +30,9 @@ const TREATMENTS = [
 
 const BRANCHES = [
   { name: "Anantapur", href: "/branches/anantapur" },
-  { name: "Vanasthalipuram", href: "/contact?branch=vanasthalipuram" },
-  { name: "Kondapur", href: "/contact?branch=kondapur" },
-  { name: "Whitefield", href: "/contact?branch=whitefield" }
+  { name: "Vanasthalipuram", href: "/branches/vanasthalipuram" },
+  { name: "Kondapur", href: "/branches/kondapur" },
+  { name: "Whitefield", href: "/branches/whitefield" }
 ];
 
 interface NavItemProps {
@@ -98,7 +98,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-[100] transition-all duration-500">
+      <header className="fixed top-0 left-0 right-0 z-100 transition-all duration-500">
 
         {/* TOP BAR — hidden on mobile, visible md+ */}
         <div className={`hidden md:block bg-slate-950 border-b border-white/5 transition-all duration-500 ${isScrolled ? 'h-0 opacity-0 overflow-hidden' : 'h-10 opacity-100'}`}>
@@ -106,7 +106,7 @@ export default function Header() {
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2 text-[14px] text-white font-semibold uppercase">
                 <Clock size={16} className="text-yellow-400" />
-                <span>Mon - Sat: 9:00 AM - 8:00 PM</span>
+                <span>Mon - Sat: 10:00 AM - 8:00 PM</span>
               </div>
               <div className="hidden md:flex items-center gap-2 text-[14px] text-white font-semibold border-l border-slate-800 pl-6">
                 <MapPin size={16} className="text-yellow-400" />
@@ -147,7 +147,7 @@ export default function Header() {
                 alt="Dharma Dental Care"
                 width={160}
                 height={50}
-                className="xl:w-[180px] xl:h-auto object-contain"
+                className="xl:w-45 xl:h-auto object-contain"
                 priority
               />
             </Link>
@@ -188,6 +188,7 @@ export default function Header() {
               </NavItem>
 
               <NavItem label="Blog" href="/blog" />
+              <NavItem label="FAQ's" href="/faqs" />
               <NavItem label="Contact" href="/contact" />
             </nav>
 
@@ -224,14 +225,14 @@ export default function Header() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMobileMenuOpen(false)}
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[200]"
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-200"
             />
             <motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 bottom-0 w-[80%] max-w-sm bg-slate-950 z-[201] p-8 flex flex-col border-l border-slate-900 shadow-2xl overflow-y-auto"
+              className="fixed top-0 right-0 bottom-0 w-[80%] max-w-sm bg-slate-950 z-201 p-8 flex flex-col border-l border-slate-900 shadow-2xl overflow-y-auto"
             >
               <div className="flex justify-between items-center mb-10">
                 <span className="text-white font-black text-xl tracking-tighter">Navigation</span>
@@ -251,7 +252,7 @@ export default function Header() {
 
                 <div className="space-y-4">
                   <p className="text-[13px] uppercase tracking-[0.3em] text-slate-600 font-bold">Treatments</p>
-                  {TREATMENTS.slice(0, 4).map(t => (
+                  {TREATMENTS.slice(0, 7).map(t => (
                     <Link key={t.name} href={t.href} onClick={() => setMobileMenuOpen(false)} className="block text-base font-bold text-slate-400 hover:text-white">{t.name}</Link>
                   ))}
                 </div>
@@ -267,6 +268,8 @@ export default function Header() {
 
                 <Link href="/gallery" onClick={() => setMobileMenuOpen(false)} className="block text-base font-black text-white hover:text-yellow-400 transition-colors">Gallery</Link>
                 <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="block text-base font-black text-white hover:text-yellow-400 transition-colors">Blog</Link>
+                <Link href="/faqs" onClick={() => setMobileMenuOpen(false)} className="block text-base font-black text-white hover:text-yellow-400 transition-colors">FAQ's</Link>
+
                 <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-base font-black text-white hover:text-yellow-400 transition-colors">Contact</Link>
               </div>
 

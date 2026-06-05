@@ -68,23 +68,23 @@ function ClinicCard({ clinic, index }: { clinic: (typeof CLINICS)[0]; index: num
   return (
     <motion.div
       variants={fadeUp}
-      className="group relative bg-white rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-slate-200/70 hover:-translate-y-2 transition-all duration-500 overflow-hidden"
+      className="group relative bg-white rounded-4xl border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-slate-200/70 hover:-translate-y-2 transition-all duration-500 overflow-hidden"
     >
       {/* Animated gradient blob on hover */}
       <motion.div
-        className={`absolute -top-10 -right-10 w-40 h-40 rounded-full bg-gradient-to-br ${clinic.gradient} blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`}
+        className={`absolute -top-10 -right-10 w-40 h-40 rounded-full bg-linear-to-br ${clinic.gradient} blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`}
       />
 
       {/* Top animated gradient bar */}
-      <div className="absolute top-0 left-0 right-0 h-[3px] overflow-hidden rounded-t-[2rem]">
+      <div className="absolute top-0 left-0 right-0 h-0.75 overflow-hidden rounded-t-4xl">
         <motion.div
-          className={`h-full w-full bg-gradient-to-r ${clinic.gradient.replace('from-', 'from-').replace('/20', '').replace('/15', '').replace('/8', '')} opacity-0 group-hover:opacity-100`}
+          className={`h-full w-full bg-linear-to-r ${clinic.gradient.replace('from-', 'from-').replace('/20', '').replace('/15', '').replace('/8', '')} opacity-0 group-hover:opacity-100`}
           initial={{ x: '-100%' }}
           whileHover={{ x: '0%' }}
           transition={{ duration: 0.5, ease: EASE }}
         />
         <div
-          className={`absolute inset-0 bg-gradient-to-r ${clinic.gradient.replace('/20', '').replace('/15', '')} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+          className={`absolute inset-0 bg-linear-to-r ${clinic.gradient.replace('/20', '').replace('/15', '')} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
         />
       </div>
 
@@ -145,7 +145,7 @@ function ClinicCard({ clinic, index }: { clinic: (typeof CLINICS)[0]; index: num
         </div>
 
         {/* Divider */}
-        <div className="my-6 h-px bg-gradient-to-r from-transparent via-slate-100 to-transparent" />
+        <div className="my-6 h-px bg-linear-to-r from-transparent via-slate-100 to-transparent" />
 
         {/* Get Directions */}
         <a
@@ -164,7 +164,7 @@ function ClinicCard({ clinic, index }: { clinic: (typeof CLINICS)[0]; index: num
       </div>
 
       {/* Bottom shimmer line on hover */}
-      <div className="absolute bottom-0 left-6 right-6 h-[1px] bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute bottom-0 left-6 right-6 h-px bg-linear-to-r from-transparent via-yellow-400/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     </motion.div>
   );
 }
@@ -177,12 +177,12 @@ export default function ContactClinics() {
       <motion.div
         animate={{ scale: [1, 1.08, 1], opacity: [0.5, 0.8, 0.5] }}
         transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-yellow-400/8 rounded-full blur-[100px] pointer-events-none"
+        className="absolute top-[-10%] right-[-5%] w-125 h-125 bg-yellow-400/8 rounded-full blur-[100px] pointer-events-none"
       />
       <motion.div
         animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.6, 0.3] }}
         transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-        className="absolute bottom-[-5%] left-[-5%] w-[400px] h-[400px] bg-blue-400/6 rounded-full blur-[100px] pointer-events-none"
+        className="absolute bottom-[-5%] left-[-5%] w-100 h-100 bg-blue-400/6 rounded-full blur-[100px] pointer-events-none"
       />
 
       {/* Dot grid */}
@@ -208,18 +208,18 @@ export default function ContactClinics() {
                 <MapPin size={13} /> Our Locations
               </div>
               <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter">
-                Find a Clinic{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-400 italic">
-                  Near You
+              Our{' '}
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-yellow-500 to-yellow-400 italic">
+                Branches
                 </span>
               </h2>
               <p className="text-slate-600 text-base max-w-md leading-relaxed">
-                Four premium locations across Hyderabad and Bengaluru — always close to you.
+              With multiple branches available, patients can choose the location that best suits their home, workplace, or travel convenience. This makes it easier to stay consistent with check-ups, follow-ups, and longer treatment plans.dharmadentalcare
               </p>
             </div>
 
             <Link
-              href="/locations"
+              href="/branches"
               className="group flex items-center gap-3 text-sm font-black uppercase tracking-widest text-slate-500 hover:text-slate-900 transition-colors self-start md:self-auto"
             >
               View All Locations

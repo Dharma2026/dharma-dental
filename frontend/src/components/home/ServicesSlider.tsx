@@ -51,7 +51,7 @@ const ORIGINAL_SERVICES: Service[] = [
 const SERVICES: Service[] = [...ORIGINAL_SERVICES, ...ORIGINAL_SERVICES, ...ORIGINAL_SERVICES];
 
 const ServiceCard = ({ service }: { service: Service }) => (
-  <div className="group relative bg-white rounded-[40px] p-8 lg:p-10 shadow-sm border border-gray-50 flex flex-col items-start min-h-[380px] w-full transition-all duration-700 hover:shadow-2xl hover:-translate-y-2 overflow-hidden">
+  <div className="group relative bg-white rounded-[40px] p-8 lg:p-10 shadow-sm border border-gray-50 flex flex-col items-start min-h-95 w-full transition-all duration-700 hover:shadow-2xl hover:-translate-y-2 overflow-hidden">
     <div className="absolute top-8 right-8 text-yellow-500">
       <service.icon />
     </div>
@@ -197,7 +197,7 @@ const ServicesSlider = () => {
             {SERVICES.map((service, index) => (
               <div 
                 key={`${service.id}-${index}`} 
-                className="flex-shrink-0 w-[300px] sm:w-[350px]"
+                className="shrink-0 w-75 sm:w-87.5"
               >
                 <ServiceCard service={service} />
               </div>

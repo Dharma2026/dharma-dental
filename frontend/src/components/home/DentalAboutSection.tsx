@@ -60,7 +60,7 @@ const AboutSection: React.FC = () => {
           </div>
 
           {/* Main Image */}
-          <div className="relative z-10 rounded-tl-4xl rounded-br-4xl overflow-hidden border-[8px] border-white shadow-2xl shadow-slate-200 aspect-[4/5] max-w-md mx-auto lg:mx-0">
+          <div className="relative z-10 rounded-tl-4xl rounded-br-4xl overflow-hidden border-8 border-white shadow-2xl shadow-slate-200 aspect-4/5 max-w-md mx-auto lg:mx-0">
             <Image 
               src="/p3.webp" 
               alt="Expert Dentist at Dharma Dental"
@@ -87,7 +87,7 @@ const AboutSection: React.FC = () => {
 
           {/* Floating Badge 2: Blue "22 Years" Card (Bottom Left) */}
           <div className="absolute bottom-10 -left-6 lg:-left-12 z-20">
-            <div className="bg-[#fdc700] text-black p-6 rounded-tr-[30px] rounded-bl-[30px] shadow-xl shadow-blue-900/20 flex items-center gap-4 transform rotate-[-3deg] hover:rotate-0 transition-transform duration-300">
+            <div className="bg-[#fdc700] text-black p-6 rounded-tr-[30px] rounded-bl-[30px] shadow-xl shadow-blue-900/20 flex items-center gap-4 transform -rotate-3 hover:rotate-0 transition-transform duration-300">
               <div className="p-3 bg-white/20 rounded-lg backdrop-blur-sm">
                 <ShieldCheck size={32} />
               </div>
@@ -116,14 +116,21 @@ const AboutSection: React.FC = () => {
                     About Us
                   </span>
                 </motion.div>
-            <h2 className="text-3xl lg:text-5xl font-bold text-slate-900 leading-[1.2]">
-              Looking for a Dentist to <br/>
-              give you a <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e2ad01] to-[#f5e502]">Special Smile?</span>
+            <h2 className="text-3xl lg:text-[38px] font-bold text-slate-900 leading-[1.2]">
+            Welcome to   <br/>
+            Dharma Dental Your Trusted  <span className="text-transparent bg-clip-text bg-linear-to-r from-[#e2ad01] to-[#f5e502]">Dental Clinic Near You
+</span>
             </h2>
           </div>
 
           <p className="text-slate-500 leading-relaxed text-lg">
-            Our clinic was created to make your smile beautiful, healthy, and white. We offer a wide range of dental treatments and restoration services, with a focus on patient comfort and satisfaction.
+          If you are searching for the best dental clinic near me, Dharma Dental is your trusted destination for complete oral care. We combine clinical expertise, advanced dental technology, and a patient-first approach to deliver exceptional results.
+          </p>
+          <p className="text-slate-500 leading-relaxed text-lg ">
+          At Dharma Dental, we specialize in preventive, restorative, and cosmetic dentistry — ensuring every patient receives personalized treatment tailored to their needs. Our mission is to provide high-quality dental care that is comfortable, affordable, and long-lasting.
+          </p>
+          <p className="text-slate-500 leading-relaxed text-lg ">
+          Whether it’s a routine check-up or a complex dental procedure, Dharma Dental is committed to helping you achieve a healthy, confident smile.
           </p>
 
           {/* Inner Feature Box */}
@@ -134,7 +141,7 @@ const AboutSection: React.FC = () => {
             {/* Feature Image */}
             <div className="relative w-full sm:w-1/3 h-32 rounded-xl overflow-hidden shrink-0">
               <Image 
-                src="/p3.webp" 
+                src="/p3-small.webp" 
                 alt="Dental Treatment at Dharma Dental"
                 fill
                 className="object-cover"
